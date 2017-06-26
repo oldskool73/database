@@ -39,12 +39,12 @@ class PostgresGrammar extends LaravelPostgresGrammar
         }
 
         // If querying json column
-        foreach ($this->jsonOperators as $operator) {
-            if (stripos($value, $operator)) {
-                list($value, $key) = explode($operator, $value, 2);
-                return parent::wrapValue($value) . $operator . $key;
-            }
-        }
+        // foreach ($this->jsonOperators as $operator) {
+        //     if (stripos($value, $operator)) {
+        //         list($value, $key) = explode($operator, $value, 2);
+        //         return parent::wrapValue($value) . $operator . $key;
+        //     }
+        // }
 
         return parent::wrapValue($value);
     }
